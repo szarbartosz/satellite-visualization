@@ -4,6 +4,7 @@
 #include <time.h>
 #include <direct.h>
 #include <GL/glu.h>
+#include "sphere.h"
 
 //#include <GL/glaux.h>
 //#define GLUTCHECKLOOP

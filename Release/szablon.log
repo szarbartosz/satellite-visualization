@@ -1,31 +1,27 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(513,5): warning MSB8028: Katalog pośredni (.\Release\) zawiera pliki udostępnione z innego projektu (szablon.vcxproj). Może to spowodować niepoprawne zachowanie podczas oczyszczania i ponownej kompilacji.
   template.cpp
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(222,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(234,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(235,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(268,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(278,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(279,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(223,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(235,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(236,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(269,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(279,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(280,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  sphere.cpp
+  Generowanie kodu...
   template.cpp
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(222,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(234,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(235,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(268,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(278,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(279,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  definitions.cpp
-  interaction.cpp
-  configuration.cpp
-  model3DS.cpp
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(223,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(235,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(236,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(269,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(279,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(280,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  template.cpp
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(223,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(235,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(236,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(269,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(279,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(280,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
   drawing.cpp
-  template.cpp
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(222,5): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(234,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(235,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(268,2): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(278,4): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\template.cpp(279,4): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-  textureBMP.cpp
-  textureTGA.cpp
   Generowanie kodu...
   szablon.vcxproj -> C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\Release\template.exe
