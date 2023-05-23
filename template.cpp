@@ -269,7 +269,7 @@ void activateSpecialModelRender(char * file_name, int spec_id = 0)
 		model_tmp->setSpecialTransform(spec_id);
 }
 
-void ladujModele()
+void loadModels()
 {
 	WIN32_FIND_DATA *fd;
 	HANDLE fh;
@@ -372,6 +372,24 @@ void syncTimer (int ID)
 	glutTimerFunc(1,syncTimer,10);
 }
 
+/*** HANDLING API KY FOR SATELITE DATA FETCHING ***/
+
+std::string readApiKeyFromFile(const std::string& filePath) {
+	std::ifstream file(filePath); // Open the file
+
+	if (!file) {
+		std::cerr << "Failed to open the file: " << filePath << std::endl;
+		return ""; // Return an empty string or handle the error appropriately
+	}
+
+	std::string apiKey;
+	std::getline(file, apiKey); // Read the API key from the file
+
+	file.close(); // Close the file
+
+	return apiKey;
+}
+
 int main(int argc, char **argv)
 {
 	#define _CONFIGURATION
@@ -429,7 +447,7 @@ int main(int argc, char **argv)
 			glutTimerFunc(10,syncTimer,10);
 		resetCamera();
 		//srand( (unsigned)time( NULL ) );
-	    ladujModele();
+	    loadModels();
 		activateSpecialModelRender("woda",1);
 		activateSpecialModelRender("most",2);
 		if (isFullScreen && stereoMode != 2) glutFullScreen();
