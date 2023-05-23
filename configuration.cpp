@@ -7,5 +7,27 @@
 	
 	setupCameraArea(500);
 
+	std::cout << "Fetching data from api...\n";
+	try {
+		curlpp::Cleanup cleaner;
+		curlpp::Easy request;
+
+		//// Setting the URL to retrive.
+		//request.setOpt(new curlpp::options::Url(std::string("https://api.n2yo.com/rest/v1/satellite//tle/25544&apiKey={your_api_key}")));
+
+		//std::cout << "Fetched data: " << request << std::endl;
+
+		// Even easier version. It does the same thing 
+		// but if you need to download only an url,
+		// this is the easiest way to do it.
+		std::cout << curlpp::options::Url(std::string("https://api.n2yo.com/rest/v1/satellite//tle/25544&apiKey={your_api_key}")) << std::endl;
+	}
+	catch (curlpp::LogicError& e) {
+		std::cout << e.what() << std::endl;
+	}
+	catch (curlpp::RuntimeError& e) {
+		std::cout << e.what() << std::endl;
+	}
+
 #undef _CONFIGURATION
 #endif

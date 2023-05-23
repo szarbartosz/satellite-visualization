@@ -6,6 +6,16 @@
 #include <GL/glu.h>
 #include "sphere.h"
 
+#include <iostream>
+#include <sstream>
+#include <iomanip>
+#include <fstream>
+
+#include <curlpp/cURLpp.hpp>
+#include <curlpp/Easy.hpp>
+#include <curlpp/Options.hpp>
+#include <curlpp/Exception.hpp>
+
 //#include <GL/glaux.h>
 //#define GLUTCHECKLOOP
 	
