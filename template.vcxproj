@@ -137,6 +137,22 @@
     <ClCompile Include="configuration.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> template.cpp  template.cpp</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="libsgp4\CoordGeodetic.cc" />
+    <ClCompile Include="libsgp4\CoordTopocentric.cc" />
+    <ClCompile Include="libsgp4\DateTime.cc" />
+    <ClCompile Include="libsgp4\DecayedException.cc" />
+    <ClCompile Include="libsgp4\Eci.cc" />
+    <ClCompile Include="libsgp4\Globals.cc" />
+    <ClCompile Include="libsgp4\Observer.cc" />
+    <ClCompile Include="libsgp4\OrbitalElements.cc" />
+    <ClCompile Include="libsgp4\SatelliteException.cc" />
+    <ClCompile Include="libsgp4\SGP4.cc" />
+    <ClCompile Include="libsgp4\SolarPosition.cc" />
+    <ClCompile Include="libsgp4\TimeSpan.cc" />
+    <ClCompile Include="libsgp4\Tle.cc" />
+    <ClCompile Include="libsgp4\TleException.cc" />
+    <ClCompile Include="libsgp4\Util.cc" />
+    <ClCompile Include="libsgp4\Vector.cc" />
     <ClCompile Include="model3DS.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> template.cpp  template.cpp</AdditionalOptions>
     </ClCompile>
@@ -155,6 +171,22 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="libsgp4\CoordGeodetic.h" />
+    <ClInclude Include="libsgp4\CoordTopocentric.h" />
+    <ClInclude Include="libsgp4\DateTime.h" />
+    <ClInclude Include="libsgp4\DecayedException.h" />
+    <ClInclude Include="libsgp4\Eci.h" />
+    <ClInclude Include="libsgp4\Globals.h" />
+    <ClInclude Include="libsgp4\Observer.h" />
+    <ClInclude Include="libsgp4\OrbitalElements.h" />
+    <ClInclude Include="libsgp4\SatelliteException.h" />
+    <ClInclude Include="libsgp4\SGP4.h" />
+    <ClInclude Include="libsgp4\SolarPosition.h" />
+    <ClInclude Include="libsgp4\TimeSpan.h" />
+    <ClInclude Include="libsgp4\Tle.h" />
+    <ClInclude Include="libsgp4\TleException.h" />
+    <ClInclude Include="libsgp4\Util.h" />
+    <ClInclude Include="libsgp4\Vector.h" />
     <ClInclude Include="model3DS.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="textureBMP.h" />
