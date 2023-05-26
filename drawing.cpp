@@ -16,21 +16,23 @@
 
 	float lineColor[] = { 0.2f, 0.2f, 0.2f, 1 };
 
-	sphere1.drawWithLines(lineColor);
+	//sphere1.drawWithLines(lineColor);
 
 
-    glPushMatrix();
-    glTranslatef(-2.5f, 0, 0);
-    glBindTexture(GL_TEXTURE_2D, 0);
-    sphere1.drawWithLines(lineColor);
-    sphere1.drawLines(lineColor);
+    /*glPushMatrix();
+		glTranslatef(-2.5f, 0, 0);
+		glBindTexture(GL_TEXTURE_2D, 0);
+		sphere1.drawWithLines(lineColor);
+		sphere1.drawLines(lineColor);
     glPopMatrix();
 
 
     glPushMatrix();
-    glBindTexture(GL_TEXTURE_2D, 0);
-    sphere2.drawWithLines(lineColor);
-    glPopMatrix();
+		
+
+		glBindTexture(GL_TEXTURE_2D, 0);
+		sphere2.drawWithLines(lineColor);
+    glPopMatrix();*/
 
 #undef _DRAWING
 #endif

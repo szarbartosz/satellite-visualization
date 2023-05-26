@@ -5,6 +5,7 @@
 #include <direct.h>
 #include <GL/glu.h>
 #include "sphere.h"
+#include "satellite.h"
 
 #include <iostream>
 #include <sstream>
@@ -16,9 +17,10 @@
 #include <curlpp/Options.hpp>
 #include <curlpp/Exception.hpp>
 
+
 //#include <GL/glaux.h>
 //#define GLUTCHECKLOOP
-	
+	//{"info":{"satid":25544,"satname":"SPACE STATION","transactionscount":1},"tle":"1 25544U 98067A   23144.35992656  .00014977  00000-0  26854-3 0  9995\r\n2 25544  51.6416  86.6432 0005375  14.6417 128.6708 15.50136251398097"}
 int windowWidth = 800;
 int windowHeight = 600;
 bool isFullScreen = false;
@@ -296,6 +298,12 @@ void loadModels()
 
 /****************** DRAWING FRAME CONTENT ******************/
 
+
+
+float translateX = 0;
+float translateY = 0;
+float translateZ = 0;
+
 void drawFrame(bool right)
 {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -321,6 +329,13 @@ void drawFrame(bool right)
 
 	#define _DRAWING
 	#include "drawing.cpp"
+
+	glTranslatef(translateX, translateY, translateZ);
+
+	Satellite satellite(1.0f, 36, 18, false, 2);
+	std::vector<float> a{ 2,2,2 };
+	satellite.draw(a, 5, "my string");
+
 
 	glFlush(); 
     glPopMatrix();
