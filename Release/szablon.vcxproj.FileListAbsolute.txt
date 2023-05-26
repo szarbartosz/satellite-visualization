@@ -1,6 +1,0 @@
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\SILNIK3D (1)\szablon - tunel\Release\template.exe
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\Release\template.exe
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\Release\szablon.vcxproj.CopyComplete
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\Release\curlpp.dll
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\Release\libcurl.dll
-C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\Release\zlib1.dll
