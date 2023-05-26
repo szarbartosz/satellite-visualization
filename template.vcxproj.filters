@@ -99,6 +99,9 @@
     <ClCompile Include="libsgp4\Vector.cc">
       <Filter>SGP4\Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="satellite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="model3DS.h">
@@ -163,6 +166,9 @@
     </ClInclude>
     <ClInclude Include="libsgp4\Vector.h">
       <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="satellite.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

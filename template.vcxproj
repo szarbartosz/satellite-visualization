@@ -72,6 +72,8 @@
       <ObjectFileName>.\Release\</ObjectFileName>
       <ProgramDataBaseFileName>.\Release\</ProgramDataBaseFileName>
       <AdditionalOptions> template.cpp</AdditionalOptions>
+      <AdditionalIncludeDirectories>C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\libsgp4;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Midl>
       <TypeLibraryName>.\Release\template.tlb</TypeLibraryName>
@@ -89,6 +91,7 @@
       <SubSystem>Console</SubSystem>
       <OutputFile>.\Release\template.exe</OutputFile>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;glaux.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\Users\Lenovo\Desktop\inf\magisterka\openGL\satelite-visualization\libsgp4;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -159,6 +162,7 @@
     <ClCompile Include="drawing.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> template.cpp  template.cpp</AdditionalOptions>
     </ClCompile>
+    <ClCompile Include="satellite.cpp" />
     <ClCompile Include="sphere.cpp" />
     <ClCompile Include="template.cpp">
       <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> template.cpp  template.cpp</AdditionalOptions>
@@ -188,6 +192,7 @@
     <ClInclude Include="libsgp4\Util.h" />
     <ClInclude Include="libsgp4\Vector.h" />
     <ClInclude Include="model3DS.h" />
+    <ClInclude Include="satellite.h" />
     <ClInclude Include="sphere.h" />
     <ClInclude Include="textureBMP.h" />
     <ClInclude Include="textureTGA.h" />
