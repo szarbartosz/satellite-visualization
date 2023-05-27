@@ -3,3 +3,5 @@ template.vcxproj*
 apikey.txt
 Debug
 Release
+template.vcxproj
+template.vcxproj.user
