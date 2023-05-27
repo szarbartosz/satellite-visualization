@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{d22380b5-3df6-4e6b-ab63-2a894a069dcd}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;rc;def;r;odl;idl;hpj;bat</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{5bdd1214-e307-4a20-841e-c135eefb614f}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{cccac3d8-8a0d-4492-8431-decb63a0fd27}</UniqueIdentifier>
+      <Extensions>ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="SGP4">
+      <UniqueIdentifier>{afc3e612-9644-4011-8b9a-090c14cb3b07}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SGP4\Header Files">
+      <UniqueIdentifier>{6cc03bfa-7504-4850-a325-a6359da445e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SGP4\Source Files">
+      <UniqueIdentifier>{d14874f6-02c3-487a-8cdd-93df20bc679f}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="definitions.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="interaction.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="configuration.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="model3DS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="drawing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="template.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="textureBMP.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="textureTGA.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="sphere.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\CoordGeodetic.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\CoordTopocentric.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\DateTime.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\DecayedException.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\Eci.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\Globals.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\Observer.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\OrbitalElements.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\SatelliteException.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\SGP4.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\SolarPosition.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\TimeSpan.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\Tle.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\TleException.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\Util.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="libsgp4\Vector.cc">
+      <Filter>SGP4\Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="satellite.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="model3DS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="textureBMP.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="textureTGA.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="sphere.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\CoordGeodetic.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\CoordTopocentric.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\DateTime.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\DecayedException.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\Eci.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\Globals.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\Observer.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\OrbitalElements.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\SatelliteException.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\SGP4.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\SolarPosition.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\TimeSpan.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\Tle.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\TleException.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\Util.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="libsgp4\Vector.h">
+      <Filter>SGP4\Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="satellite.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
