@@ -1,5 +1,5 @@
 .vs
-template.vcxproj
+template.vcxproj*
 apikey.txt
 Debug
 Release
