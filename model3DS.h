@@ -1,7 +1,7 @@
 /*
 
     3DS model loader
-    © Keith O'Conor 2005
+    ï¿½ Keith O'Conor 2005
     keith.oconor @ {cs.tcd.ie, gmail.com}
 */
 
@@ -146,7 +146,7 @@ private:
 	int m_specialTransform;
 	int m_specialTransformTick;
 
-	double m_specialTransformTable[1000];  // tablica pomocnicza do transformacji specjalnych, ma rózne zastosowania
+	double m_specialTransformTable[1000];  // tablica pomocnicza do transformacji specjalnych, ma rï¿½zne zastosowania
 	
 
 	int m_compiledListLeft;
@@ -232,7 +232,7 @@ public:
 	model3DS(const char* filename, float scale = 1, bool stereo = false);
     
     void draw(int TextureID = 0, bool centruj = false);
-    void setSpecialTransform(int number);  // w³¹cza funkcjê specjaln¹ vertex shadera programowego
+    void setSpecialTransform(int number);  // wï¿½ï¿½cza funkcjï¿½ specjalnï¿½ vertex shadera programowego
 	void setStereo (){m_stereo = true;}		   // wlacza przetwarzanie stereo tekstur modelu
 	bool getStereo(){return m_stereo;}
     std::string getFilename(){return m_filename;}

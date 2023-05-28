@@ -28,7 +28,16 @@ catch (curlpp::RuntimeError& e) {
 
 Json::Value root;
 Json::Reader reader;
-reader.parse(response, root);
+bool parsingSuccessful = reader.parse(response, root);
+
+if (!parsingSuccessful) {
+	std::cout << "Failed to parse JSON" << std::endl;
+	return 1;
+}
+
+satname = root["info"]["satname"].asString();
+std::cout << "Satellite name: " << satname << "\n" << std::endl;
+
 TLEs.push_back(root["tle"].asString());
 
 #undef _REQUEST_API
