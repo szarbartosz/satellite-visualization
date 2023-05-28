@@ -12,6 +12,8 @@ void OnMousePane(int x, int y)
 
 void OnKeyPress(GLubyte key, int x, int y)
 {
+	DefaultOnKeyPress(key, x, y);
+
 	switch (key)
 	{
 	case 'w':

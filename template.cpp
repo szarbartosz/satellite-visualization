@@ -316,7 +316,6 @@ void DefaultOnKeyPress (GLubyte key, int x, int y)
       break;
 
    }
-
 }
 
 /** INITIALIZATION **/
