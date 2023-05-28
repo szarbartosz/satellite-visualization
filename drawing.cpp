@@ -1,9 +1,9 @@
 #ifdef _DRAWING
 		
-	glPushMatrix();
+	/*glPushMatrix();
 		glTranslatef(0,1,0);
 		drawModel("sky");
-	glPopMatrix();
+	glPopMatrix();*/
 
 	glPushMatrix();
 		glTranslatef(8,2,-152);
@@ -16,23 +16,17 @@
 
 	float lineColor[] = { 0.2f, 0.2f, 0.2f, 1 };
 
-	//sphere1.drawWithLines(lineColor);
+	glPushMatrix();
+		glutSolidSphere(63.71f, 50, 50);
+	glPopMatrix();
 
-
-    /*glPushMatrix();
-		glTranslatef(-2.5f, 0, 0);
-		glBindTexture(GL_TEXTURE_2D, 0);
-		sphere1.drawWithLines(lineColor);
-		sphere1.drawLines(lineColor);
-    glPopMatrix();
-
-
-    glPushMatrix();
-		
-
-		glBindTexture(GL_TEXTURE_2D, 0);
-		sphere2.drawWithLines(lineColor);
-    glPopMatrix();*/
+	for (SatellitePos satellitePos : satellitePositions) {
+		glPushMatrix();
+			glTranslatef(satellitePos.x, satellitePos.y, satellitePos.z);
+			glutSolidSphere(10.0, 50, 50);
+		glPopMatrix();
+	}
+	
 
 #undef _DRAWING
 #endif

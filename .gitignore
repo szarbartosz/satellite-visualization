@@ -4,3 +4,9 @@ Debug
 Release
 template.vcxproj
 template.vcxproj.user
+/data/baloon.3ds
+/curlpp.dll
+/jsoncpp.dll
+/libcurl.dll
+/noradIDs.txt
+/zlib1.dll
