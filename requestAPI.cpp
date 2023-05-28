@@ -35,7 +35,9 @@ if (!parsingSuccessful) {
 	return 1;
 }
 
-satname = root["info"]["satname"].asString();
+std::string satname = root["info"]["satname"].asString();
+satnames.push_back(satname);
+
 std::cout << "Satellite name: " << satname << "\n" << std::endl;
 
 TLEs.push_back(root["tle"].asString());

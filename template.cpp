@@ -75,7 +75,7 @@ struct SatellitePos{
 
 Sphere earthSphere(1.0f, 36, 18, true, 2);
 GLuint earthTexId;
-std::string satname;
+vector<string> satnames;
 vector<SatellitePos> satellitePositions;
 vector<vector<SatellitePos>> satellitePositionsFrom2Sec;
 vector<string> TLEs;
@@ -361,6 +361,15 @@ void showInfo()
 
 	float color[4] = { 1, 1, 1, 1 };
 
+	std::stringstream ss_satnames;
+	for (size_t i = 0; i < satnames.size(); ++i) {
+		ss_satnames << satnames[i];
+		if (i != satnames.size() - 1) {
+			ss_satnames << ", ";
+		}
+	}
+    std::string satnamesStr = ss_satnames.str();
+
 	std::stringstream ss;
 	ss << std::fixed << std::setprecision(3);
 
@@ -368,7 +377,7 @@ void showInfo()
 	drawString(ss.str().c_str(), 1, windowHeight - TEXT_HEIGHT, color, font);
 	ss.str("");
 
-	ss << "Satelite name: " << satname << std::ends;
+	ss << "Shown satellites: " << satnamesStr << std::ends;
 	drawString(ss.str().c_str(), 1, windowHeight - 2*TEXT_HEIGHT, color, font);
 	ss.str("");
 
