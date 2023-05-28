@@ -6,24 +6,27 @@
 		prevSecond = (int)(currentTimeV[6] / 100);
 
 		satellitePositions.clear();
-		if (satellitePositionsFrom2Sec.size() > 0) satellitePositionsFrom2Sec.erase(satellitePositionsFrom2Sec.begin());
 
-		interpolationIncrement = interpolationIncrement + 0.25;
+		for (int i = 0; i < satellitePositionsFrom2Sec.size(); i++) {
+			satellitePositionsFrom2Sec[i].clear();
+		}
+
+		interpolationIncrement += 0.25;
 
 		for (int i = 0; i < TLEs.size(); i++) {
+			vector<SatellitePos> satellitePosVector;
+			satellitePositionsFrom2Sec.push_back(satellitePosVector);
+			
+
 			std::string delimiter = "\r\n";
 			std::string line1 = TLEs[i].substr(0, TLEs[i].find(delimiter));
 			std::string line2 = TLEs[i].substr(TLEs[i].find(delimiter)+2, TLEs[i].length());
 			
 			// Create a TLE object from the two lines of text
-			Tle tle("ISS (ZARYA)", line1, line2);
+			Tle tle(line1, line2);
 
 			// Create an SGP4 propagator object
 			SGP4 sgp4(tle);
-
-			vector<SatellitePos> satellitePosVector;
-
-			satellitePositionsFrom2Sec.push_back(satellitePosVector);
 
 			int secondsIncrementor = 0;
 			while (satellitePositionsFrom2Sec[i].size() <= 1) {
@@ -44,12 +47,8 @@
 			}
 
 			satellitePositions.push_back(interpolate(satellitePositionsFrom2Sec[i][0], satellitePositionsFrom2Sec[i][1], interpolationIncrement));
-			
-			/*std::cout << geo.latitude * 180 / M_PI << endl;
-			std::cout << geo.longitude * 180 / M_PI << endl;
-			std::cout << geo.altitude << endl << endl;*/
-
 		}
+
 	}
 
 #undef _SATELLITE_PROPAGATION

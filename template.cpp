@@ -81,6 +81,7 @@ vector<vector<SatellitePos>> satellitePositionsFrom2Sec;
 vector<string> TLEs;
 float interpolationIncrement = 0;
 int prevSecond = 0;
+int numberOfSatellites = 0;
 
 #define _DEFINITIONS
 #include "definitions.cpp"
@@ -96,6 +97,93 @@ struct obstacle{
 	double posZ2;
 };
 obstacle *obstacleArea = NULL;
+
+
+/*** HANDLING API KY FOR SATELITE DATA FETCHING ***/
+
+std::string readFromFile(const std::string& filePath) {
+	std::ifstream file(filePath); // Open the file
+
+	if (!file) {
+		std::cerr << "Failed to open the file: " << filePath << std::endl;
+		return ""; // Return an empty string or handle the error appropriately
+	}
+
+	std::string apiKey;
+	std::getline(file, apiKey); // Read the API key from the file
+
+	file.close(); // Close the file
+
+	return apiKey;
+}
+
+vector<string> splitString(string str, char splitChar) {
+	std::vector<std::string> splitVector;
+	std::stringstream ss(str);
+	std::string singleStr;
+
+	while (std::getline(ss, singleStr, splitChar)) {
+		// Remove leading and trailing whitespaces from each part
+		singleStr.erase(0, singleStr.find_first_not_of(" \t"));
+		singleStr.erase(singleStr.find_last_not_of(" \t") + 1);
+
+		splitVector.push_back(singleStr);
+	}
+
+	return splitVector;
+}
+
+vector<string> getTLEsFromAPI(int numberOfSatellites) {
+	vector<string> TLEsVector;
+	std::string apiKey = readFromFile("apikey.txt");
+	std::string response;
+
+	std::cout << "Fetching data from API...\n";
+
+	std::string noradIDStr = readFromFile("noradIDs.txt");
+	vector<string> noradIDs = splitString(noradIDStr, ',');
+
+	int numberOfSatellitesToDisplay = numberOfSatellites < noradIDs.size() ? numberOfSatellites : noradIDs.size();
+
+	for (int i = 0; i < numberOfSatellitesToDisplay; i++) {
+		std::string apiURL = "https://api.n2yo.com/rest/v1/satellite//tle/" + noradIDs[i] + "&apiKey=" + apiKey;
+		try {
+			curlpp::Cleanup cleaner;
+			curlpp::Easy request;
+
+			request.setOpt(new curlpp::options::Url(apiURL));
+			std::ostringstream stream;
+			curlpp::options::WriteStream ws(&stream);
+			request.setOpt(ws);
+
+			// Perform the request
+			request.perform();
+
+			// Get the response from the stream
+			response = stream.str();
+		}
+		catch (curlpp::LogicError& e) {
+			std::cout << e.what() << std::endl;
+		}
+		catch (curlpp::RuntimeError& e) {
+			std::cout << e.what() << std::endl;
+		}
+
+		Json::Value root;
+		Json::Reader reader;
+		reader.parse(response, root);
+		if (root["tle"].asString() != "") {
+			TLEsVector.push_back(root["tle"].asString());
+			std::string satname = root["info"]["satname"].asString();
+			satnames.push_back(satname);
+		}
+	}
+	for (string tle : TLEsVector) {
+		std::cout << tle << std::endl;
+	}
+	return TLEsVector;
+}
+
 
 SatellitePos interpolate(const SatellitePos& p1, const SatellitePos& p2, double t) {
 	SatellitePos result;
@@ -138,23 +226,6 @@ vector<int> getCurrentTimeV() {
 	return dateTimeV;
 }
 
-/*** HANDLING API KY FOR SATELITE DATA FETCHING ***/
-
-std::string readApiKeyFromFile(const std::string& filePath) {
-	std::ifstream file(filePath); // Open the file
-
-	if (!file) {
-		std::cerr << "Failed to open the file: " << filePath << std::endl;
-		return ""; // Return an empty string or handle the error appropriately
-	}
-
-	std::string apiKey;
-	std::getline(file, apiKey); // Read the API key from the file
-
-	file.close(); // Close the file
-
-	return apiKey;
-}
 
 
 void resetCamera(){
@@ -648,10 +719,9 @@ int main(int argc, char **argv)
 	#define _CONFIGURATION
 	#include "configuration.cpp"
 
-	// TODO - move to separate function
-	#define _REQUEST_API
-	#include "requestAPI.cpp"
-	if (TLEs.size() == 0) TLEs.push_back("1 25544U 98067A   23144.35992656  .00014977  00000-0  26854-3 0  9995\r\n2 25544  51.6416  86.6432 0005375  14.6417 128.6708 15.50136251398097");
+	std::cout << "Please provide the number of satellites that you want to visualize: ";
+	std::cin >> numberOfSatellites;
+	TLEs = getTLEsFromAPI(numberOfSatellites);
 
 	if (argc > 1 && argv[1][0] == '-' && argv[1][1] == 's')
 	{
