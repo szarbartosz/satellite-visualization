@@ -12,5 +12,5 @@
 ### 2. First satelite preview
 
 <div style="display: flex;">
-  <img src="./img/milestone_1.jpg" alt="Sectors and stacks of a sphere" width="600px" style="padding: 5px;">
+  <img src="./img/milestone1.jpg" alt="Sectors and stacks of a sphere" width="600px" style="padding: 5px;">
 <div>
