@@ -14,7 +14,13 @@
   <img src="./img/gl_sphere02.png" alt="A point on a sphere using sector and stack angles" width="300px" style="padding: 5px;">
 <div>
 
-### 2. First satelite preview
+### 2. Texture application
+
+<div style="display: flex;">
+  <img src="./img/texturing.jpg" alt="Sectors and stacks of a sphere" width="600px" style="padding: 5px;">
+<div>
+
+### 3. First satelite preview
 
 <div style="display: flex;">
   <img src="./img/milestone1.jpg" alt="Sectors and stacks of a sphere" width="600px" style="padding: 5px;">
