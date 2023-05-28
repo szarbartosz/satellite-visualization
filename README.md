@@ -20,7 +20,7 @@
   <img src="./img/milestone1.jpg" alt="Sectors and stacks of a sphere" width="600px" style="padding: 5px;">
 <div>
 
-## Kontrybutorzy :poland: :onion:
+## Kontrybutorzy :astronaut: :astronaut:
 
 <table>
   <tr>
