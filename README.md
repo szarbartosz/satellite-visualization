@@ -1,11 +1,11 @@
 ## The objective of the project is to visualize the movement of satellites around the earth using OpenGL :earth_africa::artificial_satellite:
 
----
-
 ![OpenGL](https://img.shields.io/badge/OpenGL-%2352829f.svg?style=for-the-badge&logo=opengl&logoColor=white)
 ![C++](https://img.shields.io/badge/c++-%23f34b7d.svg?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 ![Blender](https://img.shields.io/badge/blender-%23F5792A.svg?style=for-the-badge&logo=blender&logoColor=white)
 ![3DS](https://img.shields.io/badge/3DS-D12228?style=for-the-badge&logo=nintendo-3ds&logoColor=white)
+
+---
 
 ### 1. Sphere construction
 
