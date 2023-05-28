@@ -434,8 +434,12 @@ void showInfo()
 	std::stringstream ss_satnames;
 	for (size_t i = 0; i < satnames.size(); ++i) {
 		ss_satnames << satnames[i];
-		if (i != satnames.size() - 1) {
+		if (i != 8) {
 			ss_satnames << ", ";
+		}
+		if (i == 8) {
+			ss_satnames << " ...";
+			break;
 		}
 	}
     std::string satnamesStr = ss_satnames.str();
