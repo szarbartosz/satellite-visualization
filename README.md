@@ -25,7 +25,7 @@
 <table>
   <tr>
     <td align="center"><a href="https://github.com/szarbartosz"><img src="https://avatars3.githubusercontent.com/u/48298481?s=400&u=f61ccb0f734a51dc2a1115e6478839be62cb2216&v=4" width="100px;" alt=""/><br /><sub><b>Bartosz Szar</b></sub></a><br /></td>
-    <td align="cefix fixanter"><a href="https://github.com/pasonjakub"><img src="https://avatars.githubusercontent.com/u/45394303?v=4" width="100px;" alt=""/><br /><sub><b>Jakub Pasoń</b></sub></a><br />
+    <td align="center"><a href="https://github.com/pasonjakub"><img src="https://avatars.githubusercontent.com/u/45394303?v=4" width="100px;" alt=""/><br /><sub><b>Jakub Pasoń</b></sub></a><br />
     </td>
   </tr>
 </table>
