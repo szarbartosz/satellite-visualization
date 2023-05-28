@@ -1,3 +1,6 @@
+#define NOMINMAX
+#define _USE_MATH_DEFINES
+
 #include <windows.h>
 #include "glut.h"
 #include "model3DS.h"
@@ -16,9 +19,20 @@
 #include <curlpp/Options.hpp>
 #include <curlpp/Exception.hpp>
 
-//#include <GL/glaux.h>
-//#define GLUTCHECKLOOP
-	
+#include "DateTime.h"
+#include "CoordTopocentric.h"
+#include "CoordGeodetic.h"
+#include "Observer.h"
+#include "SGP4.h"
+#include <map>
+#include "Tle.h"
+#include <json/json.h>
+
+
+using namespace std;
+using namespace libsgp4;
+
+
 int windowWidth = 800;
 int windowHeight = 600;
 bool isFullScreen = false;
@@ -46,6 +60,18 @@ double cameraSpinSpeed;
 #define MIN_DISTANCE 0.5
 double cameraArea = 0;
 
+int prevSecond = 0;
+struct SatellitePos{
+	float x;
+	float y;
+	float z;
+};
+
+vector<SatellitePos> satellitePositions;
+vector<vector<SatellitePos>> satellitePositionsFrom2Sec;
+vector<string> TLEs;
+float interpolationIncrement = 0;
+
 #define _DEFINITIONS
 #include "definitions.cpp"
 
@@ -60,6 +86,66 @@ struct obstacle{
 	double posZ2;
 };
 obstacle *obstacleArea = NULL;
+
+SatellitePos interpolate(const SatellitePos& p1, const SatellitePos& p2, double t) {
+	SatellitePos result;
+	result.x = p1.x + (p2.x - p1.x) * t;
+	result.y = p1.y + (p2.y - p1.y) * t;
+	result.z = p1.z + (p2.z - p1.z) * t;
+	return result;
+}
+
+SatellitePos createSatellitePos(float x, float y, float z) {
+	SatellitePos satellitePos = { x, y, z };
+	return satellitePos;
+}
+
+vector<int> getCurrentTimeV() {
+	auto now = std::chrono::system_clock::now();
+	auto now_ms = std::chrono::time_point_cast<std::chrono::milliseconds>(now);
+	auto value = now_ms.time_since_epoch().count();
+
+	std::time_t now_c = std::chrono::system_clock::to_time_t(now);
+	std::tm* timeinfo = std::gmtime(&now_c);
+
+	std::ostringstream oss;
+	oss << std::put_time(timeinfo, "%Y %m %d %H %M %S ");
+
+	std::string milliseconds = std::to_string(value % 1000);
+	oss << std::setw(3) << std::setfill('0') << milliseconds;
+
+	std::string currentTime = oss.str();
+
+	vector<int> dateTimeV;
+	std::istringstream iss(currentTime);
+	std::string temp;
+
+	while (std::getline(iss, temp, ' ')) {
+		dateTimeV.push_back(stoi(temp));
+	}
+
+	// Displaying the vector elements
+	return dateTimeV;
+}
+
+/*** HANDLING API KY FOR SATELITE DATA FETCHING ***/
+
+std::string readApiKeyFromFile(const std::string& filePath) {
+	std::ifstream file(filePath); // Open the file
+
+	if (!file) {
+		std::cerr << "Failed to open the file: " << filePath << std::endl;
+		return ""; // Return an empty string or handle the error appropriately
+	}
+
+	std::string apiKey;
+	std::getline(file, apiKey); // Read the API key from the file
+
+	file.close(); // Close the file
+
+	return apiKey;
+}
+
 
 void resetCamera(){
 	cameraX = 0;
@@ -318,6 +404,10 @@ void drawFrame(bool right)
 			}
 		break;
 	}
+	
+
+	#define _SATELLITE_PROPAGATION
+	#include "satellitePropagation.cpp"
 
 	#define _DRAWING
 	#include "drawing.cpp"
@@ -372,28 +462,17 @@ void syncTimer (int ID)
 	glutTimerFunc(1,syncTimer,10);
 }
 
-/*** HANDLING API KY FOR SATELITE DATA FETCHING ***/
-
-std::string readApiKeyFromFile(const std::string& filePath) {
-	std::ifstream file(filePath); // Open the file
-
-	if (!file) {
-		std::cerr << "Failed to open the file: " << filePath << std::endl;
-		return ""; // Return an empty string or handle the error appropriately
-	}
-
-	std::string apiKey;
-	std::getline(file, apiKey); // Read the API key from the file
-
-	file.close(); // Close the file
-
-	return apiKey;
-}
 
 int main(int argc, char **argv)
 {
 	#define _CONFIGURATION
 	#include "configuration.cpp"
+
+	#define _REQUEST_API
+	#include "requestAPI.cpp"
+	if (TLEs.size() == 0) TLEs.push_back("1 25544U 98067A   23144.35992656  .00014977  00000-0  26854-3 0  9995\r\n2 25544  51.6416  86.6432 0005375  14.6417 128.6708 15.50136251398097");
+
+
 	if (argc > 1 && argv[1][0] == '-' && argv[1][1] == 's')
 	{
 		stereoMode = 2;
