@@ -9,14 +9,7 @@
 	// 	drawModel("satellite");
 	// glPopMatrix();
 
-	for (SatellitePos satellitePos : satellitePositions) {
-		glPushMatrix();
-			glTranslatef(satellitePos.x, satellitePos.y, satellitePos.z);
-			glScalef(0.4f, 0.4f, 0.4f);
-			drawModel("satellite");
-		glPopMatrix();
-	}
-
+	
 	glPushMatrix();
 		glBindTexture(GL_TEXTURE_2D, earthTexId);
 		glScalef(63.71f, 63.71f, 63.71f);
@@ -24,6 +17,16 @@
 	glPopMatrix();
 
 	glBindTexture(GL_TEXTURE_2D, 0);
+
+	for (SatellitePos satellitePos : satellitePositions) {
+		glPushMatrix();
+		glTranslatef(satellitePos.x, satellitePos.y, satellitePos.z);
+		glScalef(0.4f, 0.4f, 0.4f);
+		drawModel("satellite");
+		glPopMatrix();
+	}
+
+
 	showInfo();
 
 #undef _DRAWING
