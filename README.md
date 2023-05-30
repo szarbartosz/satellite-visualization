@@ -21,6 +21,12 @@
   <img src="./img/milestone1.jpg" alt="Sectors and stacks of a sphere" width="600px" style="padding: 5px;">
 <div>
 
+### 3. There are more of them! :artificial_satellite::artificial_satellite:
+
+<div style="display: flex;">
+  <img src="./img/milestone2.jpg" alt="Sectors and stacks of a sphere" width="600px" style="padding: 5px;">
+<div>
+
 ### Contributors :man_astronaut::man_astronaut:
 
 <table>
